@@ -27,20 +27,31 @@ const ChatInput = ({ input, setInput, loading, handleSendMessage }: Props) => {
   <div className="max-w-3xl mx-auto flex gap-3 items-end">
     
     <textarea
-      onChange={(e) => setInput(e.target.value)}
-      value={input}
-      ref={textareaRef}
-      onKeyDown={(e) => {
-        if (e.key === "Enter" && !e.shiftKey) {
-          e.preventDefault()
-          handleSendMessage();
-        }
-      }}
-      placeholder="Ask anything..."
-      rows={1}
-      className="resize-none flex-grow border border-gray-300 rounded-2xl px-4 py-3 
-      focus:outline-none focus:border-black max-h-40 overflow-y-auto text-sm"
-    />
+  onChange={(e) => setInput(e.target.value)}
+  value={input}
+  ref={textareaRef}
+  onKeyDown={(e) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault()
+      handleSendMessage();
+    }
+  }}
+  placeholder="Ask anything..."
+  rows={1}
+  className="
+    resize-none flex-grow 
+    border border-gray-300 
+    rounded-2xl px-4 py-3 
+    max-h-40 overflow-y-auto text-sm
+
+    focus:outline-none 
+    focus:ring-0 
+    focus-visible:outline-none
+    focus:border-black
+
+    no-scrollbar
+  "
+/>
 
     <button
       onClick={handleSendMessage}

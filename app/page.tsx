@@ -80,7 +80,6 @@ const Page = () => {
       handleSendMessage={handleSendMessage}  
           />
 
-
     </div>
   </div>
 )

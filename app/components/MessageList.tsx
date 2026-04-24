@@ -14,7 +14,7 @@ interface Props {
 
 const MessageList = ({ history, bottomRef, loading }: Props) => {
   return (
-    <div className="flex-1 overflow-y-auto bg-gray-50 px-4 py-6">
+    <div className="flex-1 overflow-y-auto px-4 py-6">
       
       {/* CENTERED CHAT CONTAINER */}
       <div className="max-w-5xl mx-auto w-full px-4 flex flex-col gap-4">
